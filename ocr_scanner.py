@@ -64,5 +64,5 @@ if __name__ == "__main__":
 
     scanner = NutritionLabelScanner(user_id="dwilliams01")
     if scanner.validate_image_metadata("cereal_box.jpg", file_size_mb=1.8):
-        partsed_entry = Scanner.parse_ocr_text(Sample_ocr_output)
-         print(jason.dumps(parsed_entry, indent=2)) 
+        parsed_entry = scanner.parse_ocr_text(sample_ocr_output)
+        print(json.dumps(parsed_entry, indent=2))
